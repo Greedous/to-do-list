@@ -1,0 +1,183 @@
+ /* Genel Stil */
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    color: #5a4d3f;
+  }
+
+  .container {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #e6d8c3;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #8b6d5c;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  /* İnput, Buton ve Select elementleri */
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  #taskInput, #categorySelect {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #e6d8c3;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.2s;
+  }
+
+  #taskInput:focus, #categorySelect:focus {
+    border-color: #d1bfa7;
+    box-shadow: 0 0 6px rgba(209,191,167,0.5);
+  }
+
+  #addBtn {
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #d1bfa7, #bca68e);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  #addBtn:hover {
+    background: linear-gradient(135deg, #bca68e, #a88f76);
+  }
+  #categorySelect {
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none;          
+  }
+
+
+  #categorySelect {
+    padding:12px 16px;
+    border: 1px solid #e6d8c3;
+    border-radius: 10px;
+    background: #fffaf0;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  #categorySelect:focus {
+    border-color: #d1bfa7;
+    box-shadow: 0 0 6px rgba(209,191,167,0.5);
+  }
+
+  #categorySelect:hover {
+    border-color: #c9b69a;
+  }
+
+
+  /* Görev Listesi */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 4px;              
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background: #fffaf0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+    transition: all 0.2s;
+  }
+
+  li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  }
+
+  li input[type="checkbox"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #d1bfa7;
+  }
+
+  li span {
+    flex: 1;
+    word-break: break-word;
+  }
+
+  li.completed span {
+    text-decoration: line-through;
+    color: #c0b2a0;
+    opacity: 0.7;
+  }
+
+  li button {
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    background: linear-gradient(135deg, #d1bfa7, #bca68e);
+    color: #fff;
+    transition: all 0.3s;
+  }
+
+  li button:hover {
+    background: linear-gradient(135deg, #bd9a86, #a88f76);
+  }
+
+  @media(max-width: 500px){
+    .input-group {
+      flex-direction: column;
+    }
+
+    #addBtn {
+      width: 100%;
+    }
+  }
+  .category-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;             
+    line-height: 24px;        
+    background-color: #b78b5b;
+    color: #fff;
+    font-size: 12px;         
+    font-weight: 600;
+    border-radius: 2px;      
+    flex-shrink: 0;
+    margin-right: 6px;       
+    padding: 2px 6px;       
+    min-width: 30px;        
+    max-width: 53px;         
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .dragging {
+    opacity: 0.5;
+  }
